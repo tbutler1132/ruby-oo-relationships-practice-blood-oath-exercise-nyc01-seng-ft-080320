@@ -31,7 +31,11 @@ class Follower
         @@all.filter do |follower|
             follower.age >= age 
         end 
-    end 
+    end
+    
+    def self.most_active
+
+    end
 
 
     def self.all

@@ -40,8 +40,27 @@ class Cult
         end
     end 
 
-    
+    def my_followers_mottos
+        followers.each do |motto_ele|
+            puts motto_ele.motto
+        end.min
+    end 
 
+    def self.least_popular
+        array = @@all.map do |cult|
+            cult.followers.count
+        end
+        ear = array.min
+        answer = array.find_index(ear)
+        @@all[answer] 
+    end  
+    
+    def self.most_common_locations
+        cities = @@all.map do |cult|
+            cult.city
+        end
+        cities.max_by {|city| cities.count(city)} 
+    end
 
     def recruit_follower(date, follower)
         Bloodoath.new(date, self, follower)

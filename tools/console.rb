@@ -15,6 +15,7 @@ rob = Follower.new("Rob", 32, "Tacos")
 tim_satanism = Bloodoath.new("2009_05_02", satanism, tim)
 matt_scientology = Bloodoath.new("2015_02_08", scientology, matt)
 rob_satanism = Bloodoath.new("2018_04_23", satanism, rob)
+tim_ray = Bloodoath.new("2020_08_10,", ray, tim)
 
 binding.pry
 
